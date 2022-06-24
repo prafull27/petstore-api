@@ -1,8 +1,9 @@
-./allure-report
-./allure-results
-./.gradle
-./.idea/*
-./build
-./gradle/*
-./out
-./gradlew
+allure-report
+allure-results
+.gradle/*
+/.idea/*
+build/*
+gradle/*
+out/
+gradlew/
+gradle/

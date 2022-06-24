@@ -1,866 +1,0 @@
-Request method:	POST
-5Request URI:	https://petstore3.swagger.io/api/v3/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 627,
-    "name": "Nugget",
-    "category": {
-        "id": 89,
-        "name": "CatA"
-    },
-    "photoUrls": [
-)        "https://demo.testimagedemo.jpg"
-    ],
-    "tags": [
-
-        {
-            "id": 27,
-            "name": "kitty"
-        },
-
-        {
-            "id": 90,
-            "name": "puppy"
-
-        }
-    ],
-    "status": "available"
-}
-½{"id":627,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-Request method:	PUT
-5Request URI:	https://petstore3.swagger.io/api/v3/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 627,
-    "name": "Max",
-    "category": {
-        "id": 89,
-        "name": "CatA"
-    },
-    "photoUrls": [
-)        "https://demo.testimagedemo.jpg"
-    ],
-    "tags": [
-
-        {
-            "id": 27,
-            "name": "kitty"
-        },
-
-        {
-            "id": 90,
-            "name": "puppy"
-
-        }
-    ],
-    "status": "available"
-}
-º{"id":627,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-Request method:	DELETE
-:Request URI:	https://petstore3.swagger.io/api/v3/pet/1594
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	petId=1594
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-Pet deleted
-Request method:	POST
-5Request URI:	https://petstore3.swagger.io/api/v3/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 418,
-    "name": "Nugget",
-    "category": {
-        "id": 89,
-        "name": "CatA"
-    },
-    "photoUrls": [
-)        "https://demo.testimagedemo.jpg"
-    ],
-    "tags": [
-
-        {
-            "id": 27,
-            "name": "kitty"
-        },
-
-        {
-            "id": 90,
-            "name": "puppy"
-
-        }
-    ],
-    "status": "available"
-}
-½{"id":418,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-Request method:	DELETE
-9Request URI:	https://petstore3.swagger.io/api/v3/pet/418
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	petId=418
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-Pet deleted
-Request method:	GET
-9Request URI:	https://petstore3.swagger.io/api/v3/pet/418
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	petId=418
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-Pet not found
-Request method:	GET
-URequest URI:	https://petstore3.swagger.io/api/v3/pet/findByStatus?status=unavailable
-Proxy:			<none>
-Request params:	<none>
-!Query params:	status=unavailable
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-Ž{"code":400,"message":"Input error: query parameter `status value `unavailable` is not in the allowable values `[available, pending, sold]`"}
-Request method:	POST
-5Request URI:	https://petstore3.swagger.io/api/v3/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 342,
-    "name": "Nugget",
-    "category": {
-        "id": 89,
-        "name": "CatA"
-    },
-    "photoUrls": [
-)        "https://demo.testimagedemo.jpg"
-    ],
-    "tags": [
-
-        {
-            "id": 27,
-            "name": "kitty"
-        },
-
-        {
-            "id": 90,
-            "name": "puppy"
-
-        }
-    ],
-    "status": "available"
-}
-½{"id":342,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-Request method:	GET
-KRequest URI:	https://petstore3.swagger.io/api/v3/pet/findByTags?tags=kitty
-Proxy:			<none>
-Request params:	<none>
-Query params:	tags=[kitty]
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-Ç-[{"id":273,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector3457622432551604106.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":28,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector1574808193402962235.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":855,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":305,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":967,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":521,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":965,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":838,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":600,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":129,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":971,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":37,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":758,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"},{"id":385,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"invalid"},{"id":546,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector7455447874764341541.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":612,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":222,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector5439801211200952413.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":962,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":368,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":360,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":161,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":218,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"},{"id":765,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"invalid"},{"id":529,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector1206233102624051737.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":24,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"},{"id":885,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"},{"id":259,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"},{"id":798,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":627,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":342,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}]
-Request method:	POST
-5Request URI:	https://petstore3.swagger.io/api/v3/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 436,
-    "name": "Nugget",
-    "category": {
-        "id": 89,
-        "name": "CatA"
-    },
-    "photoUrls": [
-)        "https://demo.testimagedemo.jpg"
-    ],
-    "tags": [
-
-        {
-            "id": 27,
-            "name": "kitty"
-        },
-
-        {
-            "id": 90,
-            "name": "puppy"
-
-        }
-    ],
-    "status": "available"
-}
-½{"id":436,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-Request method:	GET
-SRequest URI:	https://petstore3.swagger.io/api/v3/pet/findByStatus?status=available
-Proxy:			<none>
-Request params:	<none>
-Query params:	status=available
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-¶.[{"id":4,"category":{"id":1,"name":"Dogs"},"name":"Dog 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":7,"category":{"id":4,"name":"Lions"},"name":"Lion 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":9,"category":{"id":4,"name":"Lions"},"name":"Lion 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"},{"id":20,"category":{"id":1,"name":"Dogs"},"name":"doggy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":273,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector3457622432551604106.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":28,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector1574808193402962235.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":855,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":305,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":967,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":521,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":965,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":838,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":8,"category":{"id":11,"name":"**"},"name":"****","photoUrls":["************************"],"tags":[{"id":1,"name":"*"}],"status":"available"},{"id":1,"category":{"id":1,"name":"Hola"},"name":"Perrito","photoUrls":["/tmp/inflector8406266682064104724.tmp"],"tags":[{"id":1,"name":"Bizcocho"}],"status":"available"},{"id":54321,"category":{"id":1,"name":"cat1"},"name":"pet","photoUrls":["https://test.com"],"tags":[{"id":12,"name":"tag1"}],"status":"available"},{"id":600,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":129,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":971,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":37,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":546,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector7455447874764341541.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":612,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":222,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector5439801211200952413.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":962,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":368,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":360,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":161,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":529,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector1206233102624051737.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":798,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":627,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":10,"category":{"id":1,"name":"Dogs"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":342,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":436,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}]
-Request method:	GET
-:Request URI:	https://petstore3.swagger.io/api/v3/pet/4270
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	petId=4270
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-Pet not found
-	Request method:	POST
-	5Request URI:	https://petstore3.swagger.io/api/v3/pet
-	Proxy:			<none>
-	Request params:	<none>
-	Query params:	<none>
-	Form params:	<none>
-	Path params:	<none>
-	Headers:		Accept=*/*
-	"				Content-Type=application/json
-	Cookies:		<none>
-	Multiparts:		<none>
-	Body:
-	{
-	    "id": 880,
-	    "name": "Nugget",
-	    "category": {
-	        "id": 89,
-	        "name": "CatA"
-	    },
-	    "photoUrls": [
-	)        "https://demo.testimagedemo.jpg"
-	    ],
-	    "tags": [
-	
-        {
-	            "id": 27,
-	            "name": "kitty"
-	        },
-	
-        {
-	            "id": 90,
-	            "name": "puppy"
-	
-        }
-	    ],
-	    "status": "available"
-	}
-	½{"id":880,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-	Request method:	GET
-	9Request URI:	https://petstore3.swagger.io/api/v3/pet/880
-	Proxy:			<none>
-	Request params:	<none>
-	Query params:	<none>
-	Form params:	<none>
-	Path params:	petId=880
-	Headers:		Accept=*/*
-	"				Content-Type=application/json
-	Cookies:		<none>
-	Multiparts:		<none>
-	Body:			<none>
-	½{"id":880,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-
-Request method:	POST
-
-5Request URI:	https://petstore3.swagger.io/api/v3/pet
-
-Proxy:			<none>
-
-Request params:	<none>
-
-Query params:	<none>
-
-Form params:	<none>
-
-Path params:	<none>
-
-Headers:		Accept=*/*
-
-"				Content-Type=application/json
-
-Cookies:		<none>
-
-Multiparts:		<none>
-
-Body:
-
-{
-
-    "id": 591,
-
-    "name": "Nugget",
-
-    "category": {
-
-        "id": 89,
-
-        "name": "CatA"
-
-    },
-
-    "photoUrls": [
-
-)        "https://demo.testimagedemo.jpg"
-
-    ],
-
-    "tags": [
-
-
-        {
-
-            "id": 27,
-
-            "name": "kitty"
-
-        },
-
-
-        {
-
-            "id": 90,
-
-            "name": "puppy"
-
-
-        }
-
-    ],
-
-    "status": "available"
-
-}
-
-½{"id":591,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-
-Request method:	POST
-
-TRequest URI:	https://petstore3.swagger.io/api/v3/pet/591?name=doggie&status=pending
-
-Proxy:			<none>
-
-Request params:	<none>
-
-Query params:	name=doggie
-
-				status=pending
-
-Form params:	<none>
-
-Path params:	petId=591
-
-Headers:		Accept=*/*
-
-"				Content-Type=application/json
-
-Cookies:		<none>
-
-Multiparts:		<none>
-
-Body:			<none>
-
-»{"id":591,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"}
-Request method:	POST
-5Request URI:	https://petstore3.swagger.io/api/v3/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 758,
-    "name": "Nugget",
-    "category": {
-        "id": 89,
-        "name": "CatA"
-    },
-    "photoUrls": [
-)        "https://demo.testimagedemo.jpg"
-    ],
-    "tags": [
-
-        {
-            "id": 27,
-            "name": "kitty"
-        },
-
-        {
-            "id": 90,
-            "name": "puppy"
-
-        }
-    ],
-    "status": "available"
-}
-½{"id":758,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-Request method:	POST
-TRequest URI:	https://petstore3.swagger.io/api/v3/pet/758?name=doggie&status=invalid
-Proxy:			<none>
-Request params:	<none>
-Query params:	name=doggie
-				status=invalid
-Form params:	<none>
-Path params:	petId=758
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-»{"id":758,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"invalid"}
-Request method:	PUT
-5Request URI:	https://petstore3.swagger.io/api/v3/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 51,
-    "name": "Nugget",
-    "category": {
-        "id": 89,
-        "name": "CatA"
-    },
-    "photoUrls": [
-)        "https://demo.testimagedemo.jpg"
-    ],
-    "tags": [
-
-        {
-            "id": 27,
-            "name": "kitty"
-        },
-
-        {
-            "id": 90,
-            "name": "puppy"
-
-        }
-    ],
-    "status": "available"
-}
-Pet not found
-Request method:	POST
-5Request URI:	https://petstore3.swagger.io/api/v3/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 448,
-    "name": "Nugget",
-    "category": {
-        "id": 89,
-        "name": "CatA"
-    },
-    "photoUrls": [
-)        "https://demo.testimagedemo.jpg"
-    ],
-    "tags": [
-
-        {
-            "id": 27,
-            "name": "kitty"
-        },
-
-        {
-            "id": 90,
-            "name": "puppy"
-
-        }
-    ],
-    "status": "available"
-}
-½{"id":448,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-Request method:	POST
-ERequest URI:	https://petstore3.swagger.io/api/v3/pet/448/uploadImage
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	petId=448
-"Headers:		accept=application/json
-*				Content-Type=application/octet-stream
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-M/Users/prafull/Documents/code/petstore-api/build/resources/main/petImage.jpg
-å{"id":448,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector6398284344199879793.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-Request method:	GET
-ARequest URI:	https://petstore3.swagger.io/api/v3/store/inventory
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-o{"code":500,"message":"There was an error processing your request. It has been logged (ID: ab0985dffcf57ab8)"}
-Request method:	POST
-5Request URI:	https://petstore3.swagger.io/api/v3/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 373,
-    "name": "Nugget",
-    "category": {
-        "id": 89,
-        "name": "CatA"
-    },
-    "photoUrls": [
-)        "https://demo.testimagedemo.jpg"
-    ],
-    "tags": [
-
-        {
-            "id": 27,
-            "name": "kitty"
-        },
-
-        {
-            "id": 90,
-            "name": "puppy"
-
-        }
-    ],
-    "status": "available"
-}
-½{"id":373,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
-Request method:	POST
-=Request URI:	https://petstore3.swagger.io/api/v3/store/order
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 836,
-    "petId": 373,
-    "quantity": 10,
-/    "shipDate": "2022-06-24T21:44:53.502305Z",
-    "status": "approved",
-    "complete": true
-}
-t{"id":836,"petId":373,"quantity":10,"shipDate":"2022-06-24T21:44:53.502+00:00","status":"approved","complete":true}
-Request method:	GET
-ARequest URI:	https://petstore3.swagger.io/api/v3/store/order/836
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	orderId=836
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-t{"id":836,"petId":373,"quantity":10,"shipDate":"2022-06-24T21:44:53.502+00:00","status":"approved","complete":true}
-Request method:	DELETE
-ARequest URI:	https://petstore3.swagger.io/api/v3/store/order/836
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	orderId=836
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-
-Request method:	GET
-ARequest URI:	https://petstore3.swagger.io/api/v3/store/order/836
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	orderId=836
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-Order not found
-Request method:	POST
-6Request URI:	https://petstore3.swagger.io/api/v3/user
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 553,
-    "username": "ialex",
-    "firstName": "Alex",
-    "lastName": "John",
-"    "email": "alexjohn@test.com",
-    "password": "Berlin",
-    "phone": "12397767",
-    "userStatus": 1
-}
-•{"id":553,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}
-Request method:	POST
-ERequest URI:	https://petstore3.swagger.io/api/v3/user/createWithList
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-[
-    {
-        "id": 934,
-        "username": "ialex",
-        "firstName": "Alex",
-        "lastName": "John",
-&        "email": "alexjohn@test.com",
-        "password": "Berlin",
-        "phone": "12397767",
-        "userStatus": 1
-    },
-    {
-        "id": 119,
-        "username": "ialex",
-        "firstName": "Alex",
-        "lastName": "John",
-&        "email": "alexjohn@test.com",
-        "password": "Berlin",
-        "phone": "12397767",
-        "userStatus": 1
-    }
-]
-¬[{"id":934,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1},{"id":119,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}]
-Request method:	DELETE
-GRequest URI:	https://petstore3.swagger.io/api/v3/user/nonexistinguser7
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-'Path params:	username=nonexistinguser7
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-
-Request method:	POST
-6Request URI:	https://petstore3.swagger.io/api/v3/user
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 20,
-    "username": "ialex",
-    "firstName": "Alex",
-    "lastName": "John",
-"    "email": "alexjohn@test.com",
-    "password": "Berlin",
-    "phone": "12397767",
-    "userStatus": 1
-}
-”{"id":20,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}
-Request method:	GET
-<Request URI:	https://petstore3.swagger.io/api/v3/user/ialex
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	username=ialex
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-”{"id":20,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}
-Request method:	DELETE
-<Request URI:	https://petstore3.swagger.io/api/v3/user/ialex
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	username=ialex
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-
-Request method:	POST
-6Request URI:	https://petstore3.swagger.io/api/v3/user
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 581,
-    "username": "ialex",
-    "firstName": "Alex",
-    "lastName": "John",
-"    "email": "alexjohn@test.com",
-    "password": "Berlin",
-    "phone": "12397767",
-    "userStatus": 1
-}
-•{"id":581,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}
-Request method:	PUT
-<Request URI:	https://petstore3.swagger.io/api/v3/user/ialex
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	username=ialex
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 581,
-    "username": "ialex",
-    "firstName": "Rohit",
-    "lastName": "Sharma",
-"    "email": "alexjohn@test.com",
-    "password": "Berlin",
-    "phone": "12397767",
-    "userStatus": 1
-}
-˜{"id":581,"username":"ialex","firstName":"Rohit","lastName":"Sharma","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}
-Request method:	GET
-ZRequest URI:	https://petstore3.swagger.io/api/v3/user/login?username=Alex&password=Berlin
-Proxy:			<none>
-Request params:	<none>
-Query params:	username=Alex
-				password=Berlin
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-"				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-,Logged in user session: 1191693850744950784
