@@ -1,0 +1,242 @@
+[21:42:58.379] [INFO ] - Test execution started for test [Pet endpoints]... (TestListener:21) 
+[21:42:58.449] [INFO ] - ====== Test execution for test [verifyAddUpdatePet] started ====== (TestListener:42) 
+[21:42:58.456] [INFO ] - Adding a pet... (PetActions:33) 
+[21:43:04.785] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":627,"name":"Nugget","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 200
+Response Body => {"id":627,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:43:05.236] [INFO ] - Updating pet details for id => 627 (PetActions:41) 
+[21:43:11.137] [INFO ] - PUT : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":627,"name":"Max","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 200
+Response Body => {"id":627,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:43:11.162] [INFO ] - (+) Test [verifyAddUpdatePet] passed... (TestListener:47) 
+[21:43:16.231] [INFO ] - ====== Test execution for test [verifyDeletePetWithInvalidPetId] started ====== (TestListener:42) 
+[21:43:16.232] [INFO ] - Deleting a pet for Id => 1594 (PetActions:57) 
+[21:43:26.772] [INFO ] - DELETE : https://petstore3.swagger.io/api/v3/pet/1594
+Request Body => null
+Response status code => 200
+Response Body => Pet deleted (PetActions:20) 
+[21:43:26.786] [ERROR] - (-) Test [verifyDeletePetWithInvalidPetId] failed... (TestListener:26) 
+[21:43:26.787] [ERROR] - java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+ (TestListener:27) 
+[21:43:31.798] [INFO ] - ====== Test execution for test [verifyDeletePetWithValidPetId] started ====== (TestListener:42) 
+[21:43:31.798] [INFO ] - Adding a pet... (PetActions:33) 
+[21:43:41.321] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":418,"name":"Nugget","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 200
+Response Body => {"id":418,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:43:41.322] [INFO ] - Deleting a pet for Id => 418 (PetActions:57) 
+[21:43:55.790] [INFO ] - DELETE : https://petstore3.swagger.io/api/v3/pet/418
+Request Body => null
+Response status code => 200
+Response Body => Pet deleted (PetActions:20) 
+[21:43:55.793] [INFO ] - Getting a pet details for Id => 418 (PetActions:49) 
+[21:43:57.799] [INFO ] - GET : https://petstore3.swagger.io/api/v3/pet/418
+Request Body => null
+Response status code => 404
+Response Body => Pet not found (PetActions:20) 
+[21:43:57.800] [INFO ] - (+) Test [verifyDeletePetWithValidPetId] passed... (TestListener:47) 
+[21:43:57.805] [INFO ] - ====== Test execution for test [verifyFindPetByInvalidStatus] started ====== (TestListener:42) 
+[21:43:57.805] [INFO ] - Getting a pet details by status => unavailable (PetActions:75) 
+[21:43:59.949] [INFO ] - GET : https://petstore3.swagger.io/api/v3/pet/findByStatus?status=unavailable
+Request Body => null
+Response status code => 400
+Response Body => {"code":400,"message":"Input error: query parameter `status value `unavailable` is not in the allowable values `[available, pending, sold]`"} (PetActions:20) 
+[21:43:59.956] [ERROR] - (-) Test [verifyFindPetByInvalidStatus] failed... (TestListener:26) 
+[21:43:59.957] [ERROR] - java.lang.AssertionError: 1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Invalid status value"
+  Actual: {"code":400,"message":"Input error: query parameter `status value `unavailable` is not in the allowable values `[available, pending, sold]`"}
+ (TestListener:27) 
+[21:43:59.964] [INFO ] - ====== Test execution for test [verifyFindPetByTags] started ====== (TestListener:42) 
+[21:43:59.964] [INFO ] - Adding a pet... (PetActions:33) 
+[21:44:07.862] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":342,"name":"Nugget","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 200
+Response Body => {"id":342,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:44:09.995] [INFO ] - GET : https://petstore3.swagger.io/api/v3/pet/findByTags?tags=kitty
+Request Body => null
+Response status code => 200
+Response Body => [{"id":273,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector3457622432551604106.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":28,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector1574808193402962235.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":855,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":305,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":967,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":521,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":965,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":838,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":600,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":129,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":971,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":37,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":758,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"},{"id":385,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"invalid"},{"id":546,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector7455447874764341541.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":612,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":222,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector5439801211200952413.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":962,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":368,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":360,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":161,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":218,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"},{"id":765,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"invalid"},{"id":529,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector1206233102624051737.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":24,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"},{"id":885,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"},{"id":259,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"},{"id":798,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":627,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":342,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}] (PetActions:20) 
+[21:44:10.034] [INFO ] - (+) Test [verifyFindPetByTags] passed... (TestListener:47) 
+[21:44:10.038] [INFO ] - ====== Test execution for test [verifyFindPetByValidStatus] started ====== (TestListener:42) 
+[21:44:10.039] [INFO ] - Adding a pet... (PetActions:33) 
+[21:44:12.874] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":436,"name":"Nugget","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 200
+Response Body => {"id":436,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:44:12.875] [INFO ] - Getting a pet details by status => available (PetActions:75) 
+[21:44:15.825] [INFO ] - GET : https://petstore3.swagger.io/api/v3/pet/findByStatus?status=available
+Request Body => null
+Response status code => 200
+Response Body => [{"id":4,"category":{"id":1,"name":"Dogs"},"name":"Dog 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":7,"category":{"id":4,"name":"Lions"},"name":"Lion 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":9,"category":{"id":4,"name":"Lions"},"name":"Lion 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"},{"id":20,"category":{"id":1,"name":"Dogs"},"name":"doggy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":273,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector3457622432551604106.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":28,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector1574808193402962235.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":855,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":305,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":967,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":521,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":965,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":838,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":8,"category":{"id":11,"name":"**"},"name":"****","photoUrls":["************************"],"tags":[{"id":1,"name":"*"}],"status":"available"},{"id":1,"category":{"id":1,"name":"Hola"},"name":"Perrito","photoUrls":["/tmp/inflector8406266682064104724.tmp"],"tags":[{"id":1,"name":"Bizcocho"}],"status":"available"},{"id":54321,"category":{"id":1,"name":"cat1"},"name":"pet","photoUrls":["https://test.com"],"tags":[{"id":12,"name":"tag1"}],"status":"available"},{"id":600,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":129,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":971,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":37,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":546,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector7455447874764341541.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":612,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":222,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector5439801211200952413.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":962,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":368,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":360,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":161,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":529,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector1206233102624051737.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":798,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":627,"category":{"id":89,"name":"CatA"},"name":"Max","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":10,"category":{"id":1,"name":"Dogs"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":342,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"},{"id":436,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}] (PetActions:20) 
+[21:44:15.829] [INFO ] - (+) Test [verifyFindPetByValidStatus] passed... (TestListener:47) 
+[21:44:15.840] [INFO ] - ====== Test execution for test [verifyGetPetWithInvalidPetId] started ====== (TestListener:42) 
+[21:44:15.841] [INFO ] - Getting a pet details for Id => 4270 (PetActions:49) 
+[21:44:17.868] [INFO ] - GET : https://petstore3.swagger.io/api/v3/pet/4270
+Request Body => null
+Response status code => 404
+Response Body => Pet not found (PetActions:20) 
+[21:44:17.869] [INFO ] - (+) Test [verifyGetPetWithInvalidPetId] passed... (TestListener:47) 
+[21:44:17.873] [INFO ] - ====== Test execution for test [verifyGetPetWithValidPetId] started ====== (TestListener:42) 
+[21:44:17.874] [INFO ] - Adding a pet... (PetActions:33) 
+[21:44:19.814] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":880,"name":"Nugget","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 200
+Response Body => {"id":880,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:44:19.815] [INFO ] - Getting a pet details for Id => 880 (PetActions:49) 
+[21:44:23.931] [INFO ] - GET : https://petstore3.swagger.io/api/v3/pet/880
+Request Body => null
+Response status code => 200
+Response Body => {"id":880,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:44:23.964] [INFO ] - (+) Test [verifyGetPetWithValidPetId] passed... (TestListener:47) 
+[21:44:23.973] [INFO ] - ====== Test execution for test [verifyUpdatePetWithFormData] started ====== (TestListener:42) 
+[21:44:23.973] [INFO ] - Adding a pet... (PetActions:33) 
+[21:44:27.902] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":591,"name":"Nugget","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 200
+Response Body => {"id":591,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:44:27.903] [INFO ] - Updating a pet with id 591 (PetActions:65) 
+[21:44:30.153] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet/591?name=doggie&status=pending
+Request Body => null
+Response status code => 200
+Response Body => {"id":591,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"pending"} (PetActions:20) 
+[21:44:30.170] [INFO ] - (+) Test [verifyUpdatePetWithFormData] passed... (TestListener:47) 
+[21:44:30.174] [INFO ] - ====== Test execution for test [verifyUpdatePetWithFormDataWIthInvalidPetStatus] started ====== (TestListener:42) 
+[21:44:30.175] [INFO ] - Adding a pet... (PetActions:33) 
+[21:44:36.300] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":758,"name":"Nugget","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 200
+Response Body => {"id":758,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:44:36.301] [INFO ] - Updating a pet with id 758 (PetActions:65) 
+[21:44:38.468] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet/758?name=doggie&status=invalid
+Request Body => null
+Response status code => 200
+Response Body => {"id":758,"category":{"id":89,"name":"CatA"},"name":"doggie","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"invalid"} (PetActions:20) 
+[21:44:38.470] [ERROR] - (-) Test [verifyUpdatePetWithFormDataWIthInvalidPetStatus] failed... (TestListener:26) 
+[21:44:38.470] [ERROR] - java.lang.AssertionError: 1 expectation failed.
+Expected status code <405> but was <200>.
+ (TestListener:27) 
+[21:44:38.480] [INFO ] - ====== Test execution for test [verifyUpdatePetWithInvalidPetId] started ====== (TestListener:42) 
+[21:44:38.481] [INFO ] - Updating pet details for id => 51 (PetActions:41) 
+[21:44:40.350] [INFO ] - PUT : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":51,"name":"Nugget","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 404
+Response Body => Pet not found (PetActions:20) 
+[21:44:40.351] [INFO ] - (+) Test [verifyUpdatePetWithInvalidPetId] passed... (TestListener:47) 
+[21:44:40.354] [INFO ] - ====== Test execution for test [verifyUploadImg] started ====== (TestListener:42) 
+[21:44:40.355] [INFO ] - Adding a pet... (PetActions:33) 
+[21:44:42.404] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":448,"name":"Nugget","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 200
+Response Body => {"id":448,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:44:42.421] [INFO ] - Uploading image for for Id => 448 (PetActions:89) 
+[21:44:45.310] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet/448/uploadImage
+Request Body => /Users/prafull/Documents/code/petstore-api/build/resources/main/petImage.jpg
+Response status code => 200
+Response Body => {"id":448,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg","/tmp/inflector6398284344199879793.tmp"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:44:45.312] [INFO ] - (+) Test [verifyUploadImg] passed... (TestListener:47) 
+[21:44:45.314] [INFO ] - Test execution finished for test [Pet endpoints]. (TestListener:16) 
+[21:44:45.324] [INFO ] - Test execution started for test [Store endpoints]... (TestListener:21) 
+[21:44:45.327] [INFO ] - ====== Test execution for test [verifyGetInventory] started ====== (TestListener:42) 
+[21:44:45.327] [INFO ] - Get inventory details (StoreActions:41) 
+[21:44:48.280] [INFO ] - GET : https://petstore3.swagger.io/api/v3/store/inventory
+Request Body => null
+Response status code => 500
+Response Body => {"code":500,"message":"There was an error processing your request. It has been logged (ID: ab0985dffcf57ab8)"} (PetActions:20) 
+[21:44:48.281] [ERROR] - (-) Test [verifyGetInventory] failed... (TestListener:26) 
+[21:44:48.282] [ERROR] - java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <500>.
+ (TestListener:27) 
+[21:44:48.290] [INFO ] - ====== Test execution for test [verifyOrderWorkflow] started ====== (TestListener:42) 
+[21:44:48.290] [INFO ] - Adding a pet... (PetActions:33) 
+[21:44:53.499] [INFO ] - POST : https://petstore3.swagger.io/api/v3/pet
+Request Body => {"id":373,"name":"Nugget","category":{"id":89,"name":"CatA"},"photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"}
+Response status code => 200
+Response Body => {"id":373,"category":{"id":89,"name":"CatA"},"name":"Nugget","photoUrls":["https://demo.testimagedemo.jpg"],"tags":[{"id":27,"name":"kitty"},{"id":90,"name":"puppy"}],"status":"available"} (PetActions:20) 
+[21:44:53.503] [INFO ] - Placing an order with order id 836 (StoreActions:17) 
+[21:44:55.344] [INFO ] - POST : https://petstore3.swagger.io/api/v3/store/order
+Request Body => {"id":836,"petId":373,"quantity":10,"shipDate":"2022-06-24T21:44:53.502305Z","status":"approved","complete":true}
+Response status code => 200
+Response Body => {"id":836,"petId":373,"quantity":10,"shipDate":"2022-06-24T21:44:53.502+00:00","status":"approved","complete":true} (PetActions:20) 
+[21:44:55.362] [INFO ] - Get an order with order id 836 (StoreActions:25) 
+[21:44:57.483] [INFO ] - GET : https://petstore3.swagger.io/api/v3/store/order/836
+Request Body => null
+Response status code => 200
+Response Body => {"id":836,"petId":373,"quantity":10,"shipDate":"2022-06-24T21:44:53.502+00:00","status":"approved","complete":true} (PetActions:20) 
+[21:44:57.493] [INFO ] - Delete an order with order id 836 (StoreActions:33) 
+[21:45:02.116] [INFO ] - DELETE : https://petstore3.swagger.io/api/v3/store/order/836
+Request Body => null
+Response status code => 200
+Response Body =>  (PetActions:20) 
+[21:45:02.117] [INFO ] - Get an order with order id 836 (StoreActions:25) 
+[21:45:03.910] [INFO ] - GET : https://petstore3.swagger.io/api/v3/store/order/836
+Request Body => null
+Response status code => 404
+Response Body => Order not found (PetActions:20) 
+[21:45:03.911] [INFO ] - (+) Test [verifyOrderWorkflow] passed... (TestListener:47) 
+[21:45:03.912] [INFO ] - Test execution finished for test [Store endpoints]. (TestListener:16) 
+[21:45:03.914] [INFO ] - Test execution started for test [User endpoints]... (TestListener:21) 
+[21:45:03.918] [INFO ] - ====== Test execution for test [verifyCreateUser] started ====== (TestListener:42) 
+[21:45:03.919] [INFO ] - Creating a customer with id 553 (UserActions:32) 
+[21:45:08.249] [INFO ] - POST : https://petstore3.swagger.io/api/v3/user
+Request Body => {"id":553,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}
+Response status code => 200
+Response Body => {"id":553,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1} (PetActions:20) 
+[21:45:08.270] [INFO ] - (+) Test [verifyCreateUser] passed... (TestListener:47) 
+[21:45:08.301] [INFO ] - ====== Test execution for test [verifyCreateUserWithList] started ====== (TestListener:42) 
+[21:45:08.301] [INFO ] - Creating customers with with list (UserActions:40) 
+[21:45:11.220] [INFO ] - POST : https://petstore3.swagger.io/api/v3/user/createWithList
+Request Body => [{"id":934,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1},{"id":119,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}]
+Response status code => 200
+Response Body => [{"id":934,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1},{"id":119,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}] (PetActions:20) 
+[21:45:11.254] [INFO ] - (+) Test [verifyCreateUserWithList] passed... (TestListener:47) 
+[21:45:11.268] [INFO ] - ====== Test execution for test [verifyDeleteUserWithInvalidUser] started ====== (TestListener:42) 
+[21:45:11.268] [INFO ] - Deleting an user with username nonexistinguser7 (UserActions:81) 
+[21:45:27.716] [INFO ] - DELETE : https://petstore3.swagger.io/api/v3/user/nonexistinguser7
+Request Body => null
+Response status code => 200
+Response Body =>  (PetActions:20) 
+[21:45:27.719] [ERROR] - (-) Test [verifyDeleteUserWithInvalidUser] failed... (TestListener:26) 
+[21:45:27.719] [ERROR] - java.lang.AssertionError: 1 expectation failed.
+Expected status code <404> but was <200>.
+ (TestListener:27) 
+[21:45:27.729] [INFO ] - ====== Test execution for test [verifyGetAndDeleteUser] started ====== (TestListener:42) 
+[21:45:27.730] [INFO ] - Creating a customer with id 20 (UserActions:32) 
+[21:45:31.300] [INFO ] - POST : https://petstore3.swagger.io/api/v3/user
+Request Body => {"id":20,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}
+Response status code => 200
+Response Body => {"id":20,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1} (PetActions:20) 
+[21:45:31.301] [INFO ] - Get an user with username ialex (UserActions:64) 
+[21:45:33.367] [INFO ] - GET : https://petstore3.swagger.io/api/v3/user/ialex
+Request Body => null
+Response status code => 200
+Response Body => {"id":20,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1} (PetActions:20) 
+[21:45:33.392] [INFO ] - Deleting an user with username ialex (UserActions:81) 
+[21:45:40.429] [INFO ] - DELETE : https://petstore3.swagger.io/api/v3/user/ialex
+Request Body => null
+Response status code => 200
+Response Body =>  (PetActions:20) 
+[21:45:40.430] [INFO ] - (+) Test [verifyGetAndDeleteUser] passed... (TestListener:47) 
+[21:45:40.435] [INFO ] - ====== Test execution for test [verifyUpdateUser] started ====== (TestListener:42) 
+[21:45:40.435] [INFO ] - Creating a customer with id 581 (UserActions:32) 
+[21:45:42.583] [INFO ] - POST : https://petstore3.swagger.io/api/v3/user
+Request Body => {"id":581,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}
+Response status code => 200
+Response Body => {"id":581,"username":"ialex","firstName":"Alex","lastName":"John","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1} (PetActions:20) 
+[21:45:42.584] [INFO ] - Updating an user with username ialex (UserActions:72) 
+[21:45:54.263] [INFO ] - PUT : https://petstore3.swagger.io/api/v3/user/ialex
+Request Body => {"id":581,"username":"ialex","firstName":"Rohit","lastName":"Sharma","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1}
+Response status code => 200
+Response Body => {"id":581,"username":"ialex","firstName":"Rohit","lastName":"Sharma","email":"alexjohn@test.com","password":"Berlin","phone":"12397767","userStatus":1} (PetActions:20) 
+[21:45:54.283] [INFO ] - (+) Test [verifyUpdateUser] passed... (TestListener:47) 
+[21:45:54.287] [INFO ] - ====== Test execution for test [verifyUserLogin] started ====== (TestListener:42) 
+[21:45:54.287] [INFO ] - Logging in with user Alex (UserActions:48) 
+[21:45:57.850] [INFO ] - GET : https://petstore3.swagger.io/api/v3/user/login?username=Alex&password=Berlin
+Request Body => null
+Response status code => 200
+Response Body => Logged in user session: 1191693850744950784 (PetActions:20) 
+[21:45:57.857] [INFO ] - (+) Test [verifyUserLogin] passed... (TestListener:47) 
+[21:45:57.858] [INFO ] - Test execution finished for test [User endpoints]. (TestListener:16) 

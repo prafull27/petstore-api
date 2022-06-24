@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Petstore" >
+    <listeners>
+        <listener class-name="com.petstore.api.listeners.TestListener"/>
+    </listeners>
+    <test name="Pet endpoints">
+        <classes>
+            <class name="com.petstore.api.tests.PetTests"/>
+        </classes>
+    </test>
+    <test name="Store endpoints">
+        <classes>
+            <class name="com.petstore.api.tests.StoreTests"/>
+        </classes>
+    </test>
+    <test name="User endpoints">
+        <classes>
+            <class name="com.petstore.api.tests.UserTests"/>
+        </classes>
+    </test>
+</suite>
