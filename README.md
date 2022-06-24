@@ -59,7 +59,7 @@ Framework allows us to add, execute the test cases for different `petstore` REST
 
 ### Getting started
  
-#### 1. Open the [project](--ToDo) in the IntelliJ IDE
+#### 1. Open the [project](https://github.com/prafull27/petstore-api) in the IntelliJ IDE
 #### 2. Once all the dependencies are in sync, we can run the automated tests using below commands, from the root directory of project:
  1. To run only PET APIs, provide command line parameter `-PGROUP` as `pet`, as below
    ```shell script
